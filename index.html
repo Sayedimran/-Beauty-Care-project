@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>Joya's Beauty Care</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#ef63a7]/20 text-gray-800 font-[Marcellus]">
+    <!-- Navbar -->
+    <nav
+      class="flex bg-[#ef63a7]/30 items-center justify-between px-6 py-4 shadow-md w-full"
+    >
+      <!-- Logo -->
+      <div>
+        <h1 class="text-4xl font-bold">Joya's</h1>
+        <p class="text-xs text-gray-500 uppercase tracking-widest">
+          Beauty Care
+        </p>
+      </div>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-6 font-medium">
+        <li><a href="#">Shop All</a></li>
+        <li><a href="#">Makeup</a></li>
+        <li><a href="#">Skin Care</a></li>
+        <li><a href="#">Hair Care</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <!-- Icons -->
+      <div class="hidden md:flex items-center space-x-4 text-xl">
+        <button class="bg-black btn text-[#ef63a7] font-bold text-lg">
+          Book now
+        </button>
+      </div>
+
+      <!-- Mobile menu toggle -->
+      <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-[-100%] w-64 h-full bg-white shadow-md z-50 transition-all duration-300 px-6 py-10"
+    >
+      <button id="close-btn" class="text-2xl mb-6">&times;</button>
+      <ul class="flex flex-col space-y-6 font-medium">
+        <li><a href="#">Shop All</a></li>
+        <li><a href="#">Makeup</a></li>
+        <li><a href="#">Skin Care</a></li>
+        <li><a href="#">Hair Care</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <!-- banner section -->
+    <section>
+      <div class="carousel w-full lg:h-[770px]">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="./img/BannerFrist1.png" class="w-full" />
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide4" class="btn btn-circle">❮</a>
+            <a href="#slide2" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="./img/Banner1.jpg" class="w-full" />
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide1" class="btn btn-circle">❮</a>
+            <a href="#slide3" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="./img/Banner2.png" class="w-full" />
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide2" class="btn btn-circle">❮</a>
+            <a href="#slide4" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+        <div id="slide4" class="carousel-item relative w-full">
+          <img src="./img/Banner3.png" class="w-full" />
+          <div
+            class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between"
+          >
+            <a href="#slide3" class="btn btn-circle">❮</a>
+            <a href="#slide1" class="btn btn-circle">❯</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- card section -->
+    <section class="m-10 text-center">
+      <div>
+        <p>Popular Products</p>
+        <h3 class="text-4xl font-bold">Trending Now</h3>
+      </div>
+
+      <div class="container mx-auto p-4">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+        >
+          <div class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center">
+            <img
+              src="./img/CardImg/card 1.jpg"
+              alt="Product Name I"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name I</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center">
+            <img
+              src="./img/CardImg/card2.jpg"
+              alt="Product Name IO"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name IO</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center">
+            <img
+              src="./img/CardImg/card3.jpg"
+              alt="Product Name II"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name II</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div
+            class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center relative"
+          >
+            <img
+              src="./img/CardImg/card4.jpg"
+              alt="Product Name I2"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name I2</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div
+            class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center relative"
+          >
+            <img
+              src="./img/CardImg/card5.jpg"
+              alt="Product Name I2"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name I2</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div
+            class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center relative"
+          >
+            <img
+              src="./img/CardImg/card7.jpg"
+              alt="Product Name I2"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name I2</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div
+            class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center relative"
+          >
+            <img
+              src="./img/CardImg/card 8.jpg"
+              alt="Product Name I2"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name I2</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div
+            class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center relative"
+          >
+            <img
+              src="./img/CardImg/card 9.jpg"
+              alt="Product Name I2"
+              class="w-full object-cover mb-2"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name I2</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+          <div
+            class="bg-[#ef63a7]/30 p-4 rounded-lg shadow-md text-center relative"
+          >
+            <img
+              src="./img/CardImg/card10.jpg"
+              alt="Product Name I2"
+              class="w-full object-cover mb-2 rounded-lg"
+            />
+            <div class="text-yellow-500 mb-1">★★★★★</div>
+            <h3 class="text-lg font-semibold">Product Name I2</h3>
+            <p class="text-gray-600 line-through">$59.00</p>
+            <p class="text-red-600 font-bold">$45.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="py-16 px-4 md:px-8 lg:px-16 bg-gray-50">
+      <div class="container mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            What Our Customers Say
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Hear from beauty enthusiasts who love our products
+          </p>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Review Card 1 -->
+          <div
+            class="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="avatar">
+                  <div class="w-12 rounded-full">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/43.jpg"
+                      alt="Sarah J."
+                    />
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-semibold">Sarah J.</h4>
+                  <div class="flex text-amber-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4">
+                "The lipstick shades are absolutely stunning and long-lasting. I
+                get compliments every time I wear them!"
+              </p>
+              <div class="text-sm text-gray-500">
+                <span class="font-medium">Purchased:</span> Matte Lipstick
+                Collection
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 2 -->
+          <div
+            class="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="avatar">
+                  <div class="w-12 rounded-full">
+                    <img
+                      src="https://randomuser.me/api/portraits/women/65.jpg"
+                      alt="Priya K."
+                    />
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-semibold">Priya K.</h4>
+                  <div class="flex text-amber-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4">
+                "The skincare set transformed my routine. My skin has never
+                looked better!"
+              </p>
+              <div class="text-sm text-gray-500">
+                <span class="font-medium">Purchased:</span> Glow Up Skincare
+                Bundle
+              </div>
+            </div>
+          </div>
+
+          <!-- Review Card 3 -->
+          <div
+            class="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-300"
+          >
+            <div class="card-body">
+              <div class="flex items-center mb-4">
+                <div class="avatar">
+                  <div class="w-12 rounded-full">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/32.jpg"
+                      alt="David L."
+                    />
+                  </div>
+                </div>
+                <div class="ml-4">
+                  <h4 class="font-semibold">David L.</h4>
+                  <div class="flex text-amber-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-700 mb-4">
+                "Great quality products and fast shipping. The cologne has
+                become my signature scent."
+              </p>
+              <div class="text-sm text-gray-500">
+                <span class="font-medium">Purchased:</span> Signature Men's
+                Cologne
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All Button -->
+        <div class="text-center mt-12">
+          <button
+            class="btn btn-outline border-primary text-primary hover:bg-primary hover:text-white hover:border-primary"
+          >
+            View All Reviews
+            <i class="fas fa-arrow-right ml-2"></i>
+          </button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="flex flex-wrap justify-center items-center gap-8 mt-16">
+          <img
+            src="https://via.placeholder.com/150x60?text=Beauty+Award"
+            alt="Award"
+            class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+          />
+          <img
+            src="https://via.placeholder.com/150x60?text=Certified+Organic"
+            alt="Certified"
+            class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+          />
+          <img
+            src="https://via.placeholder.com/150x60?text=Cruelty+Free"
+            alt="Cruelty Free"
+            class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+    <footer class="bg-[#ef63a7]/30 text-gray-700 py-12 px-4 md:px-8 lg:px-16">
+      <div class="container mx-auto">
+        <!-- Newsletter Section -->
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8"
+        >
+          <div class="text-center md:text-left">
+            <h3 class="text-2xl font-bold mb-2">
+              Subscribe to Joya's Beauty Care
+            </h3>
+            <p class="text-gray-600">
+              Get updates on special offers and beauty tips
+            </p>
+          </div>
+
+          <div class="w-full md:w-auto">
+            <div class="join flex flex-col sm:flex-row gap-2">
+              <input
+                type="email"
+                placeholder="Your email address..."
+                class="input input-bordered join-item w-full md:w-80 focus:outline-none focus:ring-2 focus:ring-amber-500"
+              />
+              <button
+                class="btn join-item bg-[#ef63a7] hover:bg-amber-700 text-black font-bold"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Footer Content -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-8 text-black"
+        >
+          <!-- Brand Info -->
+          <div class="flex flex-col items-center md:items-start">
+            <div class="mb-4">
+              <h2 class="text-2xl font-bold">Joya's</h2>
+              <p class="text-sm uppercase tracking-widest">Beauty Care</p>
+            </div>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-amber-600 transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-amber-600 transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-amber-600 transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="flex flex-col items-center md:items-start">
+            <h3 class="text-lg font-semibold mb-4">Shop</h3>
+            <ul class="space-y-2 text-center md:text-left">
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Shop All</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Makeup</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Skin Care</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Hair Care</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company Info -->
+          <div class="flex flex-col items-center md:items-start">
+            <h3 class="text-lg font-semibold mb-4">Company</h3>
+            <ul class="space-y-2 text-center md:text-left">
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Careers</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Policies -->
+          <div class="flex flex-col items-center md:items-start">
+            <h3 class="text-lg font-semibold mb-4">Support</h3>
+            <ul class="space-y-2 text-center md:text-left">
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Refund Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Terms & Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-amber-600 transition-colors"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t text-black border-black-300 pt-8 text-center">
+          <p>Copyright © 2025 Joya's | Powered by Joya's</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- footer end  -->
+
+    <!-- Font Awesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS for toggle -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeBtn = document.getElementById("close-btn");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.style.left = "0";
+      });
+
+      closeBtn.addEventListener("click", () => {
+        mobileMenu.style.left = "-100%";
+      });
+    </script>
+  </body>
+</html>
